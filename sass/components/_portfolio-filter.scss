@@ -1,0 +1,73 @@
+.filter {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+        
+    }
+    
+    @media screen and (max-width: 767px) {
+    &__item {
+    margin-bottom: 15px;
+    }
+}
+
+    @media screen and (max-width: 767px) {
+    &__item:nth-child(2n + 3) {
+        margin-right: 0px;
+    }
+
+    &__item:nth-last-child(-n + 1) {
+        margin-bottom: 40px;   
+    }
+
+    @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    }
+ }
+}
+
+.filter__item {
+    &:not(:last-child) {
+    margin-right: 8px;
+    }
+
+
+    @media screen and (min-width: 768px) {
+    margin-bottom: 30px;   
+}
+
+    @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    }
+}
+
+.filter__button {
+    display: inline-block;
+    padding: 6px 22px;
+    min-width: 73px;
+    border: 0;
+    border-radius: 4px;
+
+    color: $secondary-color;
+    background-color: $color-bg-btn-section;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+
+    transition: background-color 250ms $cubic, color 250ms $cubic,
+    box-shadow 250ms $cubic;
+
+
+    &:hover,
+    &:focus {
+    color: $primary-white-color;
+    background-color: $bgc-btn;
+    box-shadow: $box-shadow-filter;
+}
+}

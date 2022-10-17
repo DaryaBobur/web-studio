@@ -1,0 +1,205 @@
+.modal {
+padding: 40px;
+background-color: $primary-white-color;
+box-shadow: $box-shadow;
+border-radius: 4px;
+position: relative;
+
+
+@media screen and (max-width: 479px) {
+   max-width: 100%;
+   padding: 40px 10px;
+}
+
+@media screen and (min-width: 480px) {
+    
+    width: 450px;
+    
+    top: 50%;
+    left: 50%;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms $cubic;
+}
+    @media screen and (min-width: 1200px) {
+    min-width: 528px;
+    min-height: 581px;
+    }
+}
+
+.modal__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $secondary-color;
+
+@media screen and (max-width: 1199px) {
+    line-height: 1.5;
+}
+}
+
+.form {
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 479px) {
+    width: 100%;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 370px;
+}
+
+}
+
+.form__input {
+    @extend %form-modal;
+
+    &:focus {
+    border-color: $accent-color;
+}
+    &:focus~.form__icon {
+    fill: $accent-color;
+
+}
+}
+
+.form__comment {
+    @extend %form-modal;
+    resize: none;
+    padding: 12px 16px;
+
+    &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $color-placeholder;
+}
+    &:focus {
+        border-color: $accent-color;
+    }
+
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+        line-height: 1.14;
+        
+    }
+}
+
+.form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+ &:nth-child(4) {
+    margin-bottom: 20px;
+}
+}
+
+.form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    fill: $secondary-color;
+    transition: fill 250ms $cubic;
+}
+
+.form__label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+}
+
+.form__link-contract {
+    color: $accent-color;
+    
+
+    @media screen and (max-width: 1199px) {
+       margin-left: 2px;
+    }
+    @media screen and (min-width: 1200px) {
+    margin-left: 4px;
+}
+}
+
+/* Оформление чекбокса */
+.form__input-checkbox {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.form__checkbox-bgc {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 2px solid $secondary-color;
+    border-radius: 2px;
+    transition: background-color 250ms $cubic;
+}
+
+.form__checkbox {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.71;
+
+    @media screen and (max-width: 479px) {
+    font-size: 9px;
+    line-height: 1.17;
+    text-align: center;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+}
+
+.form__label-checkbox {
+    position: relative;
+    
+    @extend %flex;
+    cursor: pointer;
+
+    @media screen and (max-width: 479px) {
+        display: inline-flex;
+        
+    }
+}
+
+.form__icon-checkbox {
+    position: absolute;
+   
+    visibility: hidden;
+
+
+
+@media screen and (max-width: 1199px) {
+    top: 0;
+    left: -1px;  
+}
+@media screen and (min-width: 1200px) {
+    top: 4px;
+    left: 10px;
+}
+}
+
+.form__input-checkbox:checked+.form__checkbox-bgc {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    border-radius: 2px;
+
+}
+.form__input-checkbox:checked~.form__icon-checkbox {
+    visibility: visible;
+}

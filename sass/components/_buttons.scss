@@ -1,0 +1,114 @@
+// Кнопка героя
+.hero__button {
+    @extend %button;
+
+    &:hover,
+    &:focus {
+    background-color: $bgc-btn;
+    }
+}
+
+// Кнопка подписки в футере
+.form-footer__button {
+    @extend %button;
+    @extend %flex;
+    
+    padding: 10px 28px 10px 29px;
+
+    &:hover,
+    &:focus {
+        background-color: $bgc-btn;
+    }
+
+    @media screen and (max-width: 1199px) {
+        margin-right: auto;
+        margin-left: auto;
+        
+    }
+}
+
+.form-footer__icon {
+    margin-left: 10px;
+}
+
+// Кнопка отправки формы в модальном окне
+.form__button {
+@extend %button;
+&:hover,
+&:focus {
+    background-color: $bgc-btn;
+}
+}
+
+
+.form__button {
+    @extend %flex;
+    padding: 10px 55px 10px 56px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Кнопка закрытия модалки
+
+.modal__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    background-color: $primary-white-color;
+    padding: 5px;
+    border: 1px solid $btn-border;
+    border-radius: 50%;
+    cursor: pointer;
+    fill: $logo-color;
+    transition: fill 250ms $cubic;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}
+
+// кнопка мобильного меню
+
+.menu-button {
+    
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 99;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+     &.is-open .menu-button__icon-cross {
+     display: block;
+     
+    }
+
+    &.is-open .menu-button__icon-menu {
+        display: none;
+    }
+}
+
+.menu-button__icon-cross {
+    display: none;
+}
+
+.menu-button {
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}
+
+.menu-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  
+}
+

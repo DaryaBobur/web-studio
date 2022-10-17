@@ -1,0 +1,52 @@
+.footer-socials__list {
+    @extend %list;
+    @extend %flex;
+
+    @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    }
+}
+
+
+
+.footer-socials__item {
+   
+
+&:not(:last-child) {
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+margin-right: 93px;  
+}
+}
+.footer-socials__link {
+    @extend %flex;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $bgc-footer-icon;
+    color: $primary-white-color;
+
+    transition: background-color 250ms $cubic;
+
+    &:hover,
+    &:focus {
+    background-color: $accent-color;
+
+    }
+
+}
+
+.footer-socials__subtitle {
+  @extend %subtitle;
+
+    color: $primary-white-color;
+    margin-bottom: 20px;
+}
+
+.footer-socials__icon {
+    fill: currentColor;
+}
+

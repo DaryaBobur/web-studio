@@ -1,0 +1,130 @@
+.mobile-menu {
+   
+    padding: 40px 40px;
+   
+
+    @media screen and (max-width: 400px) {
+    padding: 40px 10px;
+    }
+
+
+    @media screen and (max-width: 767px) {
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        box-shadow: $box-shadow-menu;
+        background-color: $primary-white-color;
+        z-index: 98;
+
+    
+        &.is-open {
+            display: block;
+            position: fixed;
+            height: 100vh;
+        }
+        }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-pages, 
+.menu-contacts,
+.menu-socials {
+@extend %list;
+}
+
+.menu-pages__item {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &:last-child {
+        margin-bottom: 150px;
+    }
+}
+
+.menu-pages__link,
+.menu-pages__link--current {
+   @extend %font-style;
+    font-size: 36px;
+    line-height: 1.18;
+    color: $secondary-color;
+}
+
+.menu-pages__link {
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.menu-pages__link--current {
+    color: $accent-color;
+    &:hover,
+    &:focus {
+        color: $secondary-color;
+    }
+}
+
+.menu-contacts__item {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+    
+    &:last-child {
+        margin-bottom: 64px;
+    }
+}
+
+.menu-contacts__link-phone {
+    
+    @extend %font-style;
+    font-size: 34px;
+    line-height: 1.18;
+    color: $accent-color;
+}
+
+.menu-contacts__link-mail {
+    @extend %font-style;
+    font-size: 24px;
+    line-height: 1.17;
+    color: $primary-text-color;
+}
+
+.menu-socials {
+   
+    display: inline-flex;
+    flex-wrap: wrap
+}
+
+.menu-socials__link {
+@extend %font-style;
+ font-size: 18px;
+line-height: 1.22;  
+color: $accent-color;
+
+@media screen and (max-width: 479px ) {
+    font-size: 14px;
+}
+}
+
+.menu-socials__item {
+    display: inline-flex;
+   
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &:not(:last-child)::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 22px;
+        background-color: $line-color;
+        margin-left: 10px; 
+}
+}

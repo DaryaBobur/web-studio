@@ -1,0 +1,22 @@
+.page-header {
+    border-bottom: 1px solid $color-border-header;
+}
+
+    .header-nav {
+
+    display: flex;
+    align-items: center;
+        
+    @media screen and (max-width: 767px) {
+    justify-content: space-between;
+}
+
+    }
+
+.header__container {
+    position: relative;
+    @media screen and (min-width: 768px) {
+       display: flex;
+       align-items: center; 
+    }
+}

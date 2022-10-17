@@ -1,0 +1,58 @@
+.logo__accent,
+.logo__name {
+    color: $accent-color;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+
+    transition: color 250ms $cubic;
+
+    @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+    }
+
+
+}
+
+.logo__accent {
+ &:hover, 
+ &:focus {
+    color: $logo-color;
+ } 
+}
+
+.logo__name {
+    color: $logo-color;
+
+    &:hover,
+    &:focus {
+    color: $accent-color;
+}
+}
+
+.logo {
+   @extend %link;
+    
+   @media screen and (max-width: 767px) {
+        display: inline-block;
+       padding-top: 16px;
+       padding-bottom: 16px;
+   }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: inline-block;
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+}
+
+.logo--footer {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.logo__name--footer {
+    color: $primary-white-color;
+}

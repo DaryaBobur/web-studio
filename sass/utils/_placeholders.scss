@@ -1,0 +1,88 @@
+%list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+%link {
+text-decoration: none;
+}
+
+%header-link {
+        color: $secondary-color;
+        
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+}
+
+%button {
+    display: inline-block;
+    min-width: 200px;
+    border: 0;
+    padding: 10px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: $primary-white-color;
+    
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    background-color: $accent-color;
+    cursor: pointer;
+    
+    transition: background-color 250ms $cubic;
+}
+
+%form-modal {
+    padding: 10px 11px 10px 41px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    
+    transition: border-color 250ms $cubic;
+}
+
+%subtitle {
+    margin-bottom: 10px;
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+%title {
+    margin-bottom: 50px;
+    
+    color: $secondary-color;
+    
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    
+}
+
+%flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%subscribe {
+font-size: 16px;
+line-height: 1.25;
+color: $contacts-color;
+letter-spacing: 0.03em;
+}
+
+%font-style {
+font-weight: 500;
+letter-spacing: 0.02em;
+text-decoration: none;
+}
