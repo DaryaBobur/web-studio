@@ -1,3 +1,3 @@
-# goit-markup-hw-08
-
-Репозиторій для восьмого домашнього завдання
+My first project on the block HTML and CSS. 
+The project used: HTML, CSS, Sass, Javascript. 
+Utilites: VsCode, Figma, Git/GitHub.
